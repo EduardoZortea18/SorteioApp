@@ -11,9 +11,9 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="204dp"
-        android:text="Sortear"
+        android:layout_marginBottom="156dp"
         android:onClick="Sortear"
+        android:text="Sortear"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -46,6 +46,6 @@
         android:layout_height="wrap_content"
         android:text="Numero"
         tools:layout_editor_absoluteX="180dp"
-        tools:layout_editor_absoluteY="479dp" />
+        tools:layout_editor_absoluteY="325dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
