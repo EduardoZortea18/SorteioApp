@@ -11,8 +11,7 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText NumInicialC, NumFinalC;
-    TextView ResultadoC;
+  Random random;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,14 +23,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void Sortear(View view) {
 
-        EditText NumInicialC = findViewById(R.id.NumInicial);
-        EditText NumFinalC   = findViewById(R.id.NumFinal);
-        EditText ResultadoC  = new Random().nextInt(NumFinalC - NumInicialC)+NumInicialC;
+        TextView textView = findViewById(R.id.Resultado);
+        EditText editTextInicial = findViewById(R.id.TextInicial);
+        EditText editTextFinal = findViewById(R.id.TextFinal);
 
-        int numinicial = Integer.parseInt(NumInicialC.getText().toString());
+        int inicial = Integer.parseInt(editTextInicial.getText().toString());
+        int fina = Integer.parseInt(editTextFinal.getText().toString());
+        random= new Random();
+        int numeroSorteado = random.nextInt( (fina - inicial) + inicial);
 
-        int numfinal = Integer.parseInt(NumFinalC.getText().toString());
-
-        ResultadoC.setText(Integer.toString(ResultadoC);
+        textView.setText(Integer.toString(numeroSorteado));
     }
 }
